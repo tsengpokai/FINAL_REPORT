@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2026 地震學課程期末報告 — 曾柏凱的整學期學習歷程回顧，包含互動式時間軸、課程筆記、實驗報告與互動小遊戲。">
+  <title>地震學 2026｜期末報告 — 學期回顧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== FLOATING NAV ==================== -->
+<nav class="floating-nav" id="floatingNav">
+  <a href="#hero" data-label="首頁" class="active"></a>
+  <a href="#stats" data-label="統計"></a>
+  <a href="#timeline-section" data-label="時間軸"></a>
+  <a href="#games" data-label="互動遊戲"></a>
+  <a href="#reflection" data-label="學期心得"></a>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🌍 2026 Spring Semester</div>
+    <h1 class="hero-title">
+      <span class="gradient-text glitch-text" data-text="地震學">地震學</span><br>學期回顧
+    </h1>
+    <p class="hero-subtitle">
+      從 AI 輔助學習到戶外震測實驗，從海灘球手繪到 Raspberry Pi 地震儀<br>
+      完整紀錄 16 週的探索旅程
+    </p>
+    <p class="hero-author">U11310015 曾柏凱 ─ University of Taipei</p>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>向下滾動探索</span>
+    <div class="arrow"></div>
+  </div>
+  <canvas id="seismicCanvas" class="seismic-wave-container"></canvas>
+</section>
+
+<!-- ==================== STATS ==================== -->
+<section class="stats-section" id="stats">
+  <div class="stats-grid">
+    <div class="stat-card" data-delay="0">
+      <div class="stat-icon">📅</div>
+      <div class="stat-number" data-target="16">0</div>
+      <div class="stat-label">週課程</div>
+    </div>
+    <div class="stat-card" data-delay="100">
+      <div class="stat-icon">🌐</div>
+      <div class="stat-number" data-target="5">0</div>
+      <div class="stat-label">互動式網頁</div>
+    </div>
+    <div class="stat-card" data-delay="200">
+      <div class="stat-icon">🔬</div>
+      <div class="stat-number" data-target="3">0</div>
+      <div class="stat-label">實驗/參訪</div>
+    </div>
+    <div class="stat-card" data-delay="300">
+      <div class="stat-icon">📸</div>
+      <div class="stat-number" data-target="20">0</div>
+      <div class="stat-label">張照片紀錄</div>
+    </div>
+    <div class="stat-card" data-delay="400">
+      <div class="stat-icon">📝</div>
+      <div class="stat-number" data-target="6">0</div>
+      <div class="stat-label">份報告/心得</div>
+    </div>
+    <div class="stat-card" data-delay="500">
+      <div class="stat-icon">🎮</div>
+      <div class="stat-number" data-target="3">0</div>
+      <div class="stat-label">互動小遊戲</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TIMELINE ==================== -->
+<section class="timeline-section" id="timeline-section">
+  <div class="section-header">
+    <h2>📍 學期<span class="gradient-text">時間軸</span></h2>
+    <p>點擊任一週卡片，展開詳細學習內容與照片</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="timeline" id="timeline">
+
+    <!-- W1 -->
+    <div class="timeline-item" data-week="1">
+      <div class="timeline-card quake-hover" onclick="openModal(1)">
+        <div class="timeline-week">WEEK 1</div>
+        <div class="timeline-date">2026 / 02 / 25</div>
+        <h3>🤖 AI 輔助學習啟航</h3>
+        <p>學習 Antigravity、NotebookLM、Gemini Gem，重新定義如何有效率地閱讀地震學課本。</p>
+        <div class="timeline-tags">
+          <span class="tag">🛠 Antigravity</span>
+          <span class="tag">🧠 NotebookLM</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W2 -->
+    <div class="timeline-item" data-week="2">
+      <div class="timeline-card quake-hover" onclick="openModal(2)">
+        <div class="timeline-week">WEEK 2</div>
+        <div class="timeline-date">2026 / 03 / 04</div>
+        <h3>🌊 彈性波基礎 & GitHub Pages 部署</h3>
+        <p>P波、S波、地球內部波傳、GitHub Pages 網頁部署實作。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-web">🌐 CH1 互動網頁</span>
+          <span class="tag">📖 彈性體</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W3 -->
+    <div class="timeline-item" data-week="3">
+      <div class="timeline-card quake-hover" onclick="openModal(3)">
+        <div class="timeline-week">WEEK 3</div>
+        <div class="timeline-date">2026 / 03 / 11</div>
+        <h3>🎤 張睿明博士演講 & 地震報告</h3>
+        <p>不同頻率地震對不同樓層的影響、AI 交叉驗證能力訓練。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-pdf">📄 演講心得</span>
+          <span class="tag">🎙 專家演講</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W4 -->
+    <div class="timeline-item" data-week="4">
+      <div class="timeline-card quake-hover" onclick="openModal(4)">
+        <div class="timeline-week">WEEK 4</div>
+        <div class="timeline-date">2026 / 03 / 18</div>
+        <h3>🌧 水保署 AI 災防 & 震測實驗準備</h3>
+        <p>聆聽老師在水保署的 AI 災防演講，了解多 AI 組合的強大威力。</p>
+        <div class="timeline-tags">
+          <span class="tag">🤖 AI 災防</span>
+          <span class="tag">🏗 震測準備</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W5 -->
+    <div class="timeline-item" data-week="5">
+      <div class="timeline-card quake-hover" onclick="openModal(5)">
+        <div class="timeline-week">WEEK 5</div>
+        <div class="timeline-date">2026 / 03 / 25</div>
+        <h3>📡 SmartSolo 震測實驗實作</h3>
+        <p>戶外佈設節點式地震儀、三分量資料分析、ObsPy 波形處理。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-photo">📸 實驗照片</span>
+          <span class="tag tag-pdf">📄 心得報告</span>
+          <span class="tag tag-web">🌐 HuggingFace</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W6 -->
+    <div class="timeline-item" data-week="6">
+      <div class="timeline-card quake-hover" onclick="openModal(6)">
+        <div class="timeline-week">WEEK 6</div>
+        <div class="timeline-date">2026 / 04 / 01</div>
+        <h3>🏛 國震中心參訪 (NCREE)</h3>
+        <p>地震工程演講、振動台與反力牆實驗設施、隔震制震科技體驗。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-photo">📸 14 張照片</span>
+          <span class="tag tag-pdf">📄 參訪報告</span>
+          <span class="tag tag-web">🌐 HuggingFace</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W7 -->
+    <div class="timeline-item" data-week="7">
+      <div class="timeline-card quake-hover" onclick="openModal(7)">
+        <div class="timeline-week">WEEK 7</div>
+        <div class="timeline-date">2026 / 04 / 08</div>
+        <h3>📋 期中考說明</h3>
+        <p>期中考範圍與格式說明，整理前半學期學習重點。</p>
+        <div class="timeline-tags">
+          <span class="tag">📝 考試</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W8 -->
+    <div class="timeline-item" data-week="8">
+      <div class="timeline-card quake-hover" onclick="openModal(8)">
+        <div class="timeline-week">WEEK 8</div>
+        <div class="timeline-date">2026 / 04 / 15</div>
+        <h3>📝 期中考與期中報告</h3>
+        <p>驗收前半學期所學：彈性波、地球構造、震測實驗、國震中心。</p>
+        <div class="timeline-tags">
+          <span class="tag">📝 期中考</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W9 -->
+    <div class="timeline-item" data-week="9">
+      <div class="timeline-card quake-hover" onclick="openModal(9)">
+        <div class="timeline-week">WEEK 9</div>
+        <div class="timeline-date">2026 / 04 / 22</div>
+        <h3>💪 應力應變複習 & 宋冠毅老師演講</h3>
+        <p>地震學課程複習、走向國際的經驗分享。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-pdf">📄 演講心得</span>
+          <span class="tag">🎙 經驗分享</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W10 -->
+    <div class="timeline-item" data-week="10">
+      <div class="timeline-card quake-hover" onclick="openModal(10)">
+        <div class="timeline-week">WEEK 10</div>
+        <div class="timeline-date">2026 / 04 / 29</div>
+        <h3>🌍 地震學第三章互動式網頁</h3>
+        <p>走時曲線、非均向性地球、地函地核組成、走時與波形剖面圖。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-web">🌐 CH3 互動網頁</span>
+          <span class="tag tag-photo">📸 走時圖</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W11 -->
+    <div class="timeline-item" data-week="11">
+      <div class="timeline-card quake-hover" onclick="openModal(11)">
+        <div class="timeline-week">WEEK 11</div>
+        <div class="timeline-date">2026 / 05 / 06</div>
+        <h3>🎓 報告第三章 & 學習設計技巧</h3>
+        <p>報告地震學第三章網頁內容，並從同學的網頁學習設計技巧。</p>
+        <div class="timeline-tags">
+          <span class="tag">📊 報告</span>
+          <span class="tag">🎨 設計技巧</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W12 -->
+    <div class="timeline-item" data-week="12">
+      <div class="timeline-card quake-hover" onclick="openModal(12)">
+        <div class="timeline-week">WEEK 12</div>
+        <div class="timeline-date">2026 / 05 / 13</div>
+        <h3>🏖 海灘球判讀 & 震源機制球</h3>
+        <p>學會看海灘球、手繪震源機制球、Google Colab 繪製驗證。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-photo">📸 手繪圖</span>
+          <span class="tag tag-pdf">📄 Kamchatka 報告</span>
+          <span class="tag tag-web">🌐 CH4 HuggingFace</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W13 -->
+    <div class="timeline-item" data-week="13">
+      <div class="timeline-card quake-hover" onclick="openModal(13)">
+        <div class="timeline-week">WEEK 13</div>
+        <div class="timeline-date">2026 / 05 / 20</div>
+        <h3>✍️ P波初動手繪震源機制解</h3>
+        <p>從 P 檔讀取 azimuth、take-off angle、上下動，手繪測站投影到焦球。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-photo">📸 手繪海灘球</span>
+          <span class="tag tag-web">🌐 Focal Mechanism</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W14 -->
+    <div class="timeline-item" data-week="14">
+      <div class="timeline-card quake-hover" onclick="openModal(14)">
+        <div class="timeline-week">WEEK 14</div>
+        <div class="timeline-date">2026 / 05 / 27</div>
+        <h3>🤖 Raspberry Pi 地震儀實作</h3>
+        <p>Raspberry Pi、UART、MPU6050 感測器、麵包板接線、IoT 地震觀測。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-photo">📸 實作截圖</span>
+          <span class="tag tag-game">🎮 IoT 地震儀</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W15 -->
+    <div class="timeline-item" data-week="15">
+      <div class="timeline-card quake-hover" onclick="openModal(15)">
+        <div class="timeline-week">WEEK 15</div>
+        <div class="timeline-date">2026 / 06 / 03</div>
+        <h3>📄 Overleaf 學術報告製作</h3>
+        <p>學習 LaTeX 與 Overleaf 製作專業的學術報告與簡報。</p>
+        <div class="timeline-tags">
+          <span class="tag">📝 LaTeX</span>
+          <span class="tag">📊 簡報</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+    <!-- W16 -->
+    <div class="timeline-item" data-week="16">
+      <div class="timeline-card quake-hover" onclick="openModal(16)">
+        <div class="timeline-week">WEEK 16</div>
+        <div class="timeline-date">2026 / 06 / 10</div>
+        <h3>🎉 期末報告 — 就是這個網頁！</h3>
+        <p>整合所有學習成果，製作互動式期末回顧網頁。</p>
+        <div class="timeline-tags">
+          <span class="tag tag-web">🌐 本網頁</span>
+          <span class="tag tag-game">🎮 互動遊戲</span>
+        </div>
+        <div class="expand-hint">👆 點擊展開詳情</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== GAMES ==================== -->
+<section class="games-section" id="games">
+  <div class="section-header">
+    <h2>🎮 互動<span class="gradient-text">小遊戲</span></h2>
+    <p>透過互動遊戲，測試你這學期學到了多少！</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="games-grid">
+    <div class="game-card quake-hover">
+      <div class="game-icon">🧠</div>
+      <h3>地震知識問答 Quiz</h3>
+      <p>10 道選擇題，涵蓋 P 波 S 波、海灘球、彈性回跳、PSHA 等整學期重點知識。你能拿滿分嗎？</p>
+      <button class="game-start-btn" onclick="startQuizGame()">🚀 開始挑戰</button>
+    </div>
+    <div class="game-card quake-hover">
+      <div class="game-icon">🏖️</div>
+      <h3>震源機制球配對</h3>
+      <p>給出斷層類型，選出正確的海灘球圖案。從逆斷層到走向滑移，看你是否真的學會了！</p>
+      <button class="game-start-btn" onclick="startBeachBallGame()">🚀 開始挑戰</button>
+    </div>
+    <div class="game-card quake-hover">
+      <div class="game-icon">⚡</div>
+      <h3>地震波速度排序</h3>
+      <p>將 P 波、S 波、Love 波、Rayleigh 波按照在地球內部的傳播速度由快到慢排序！</p>
+      <button class="game-start-btn" onclick="startWaveSortGame()">🚀 開始挑戰</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REFLECTION ==================== -->
+<section class="reflection-section" id="reflection">
+  <div class="section-header">
+    <h2>💭 學期<span class="gradient-text">心得</span></h2>
+    <p>回望這 16 週，我學到了什麼？</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="reflection-content">
+    <div class="reflection-card">
+      <p>這學期的地震學課程，對我來說並不是單純背誦 P 波、S 波、震央、震源或斷層名詞，而是一段從「如何學習地震學」逐步走向「如何像地震學研究者一樣思考」的過程。整個學期可以分成幾個重要面向：第一是 AI 輔助學習與資料整理能力，第二是地震波與地球內部構造的理論基礎，第三是野外震測與儀器操作的實作能力，第四是地震工程與防災應用，第五是震源機制解與地震事件分析，最後則是科學傳播、網頁製作與專業報告呈現能力。</p>
+
+      <p>在學期初，我們從 Antigravity、NotebookLM、Gemini Gem 等工具開始學習，這讓我重新理解「讀地震學課本」不一定只能靠傳統逐頁閱讀，而是可以透過檔案拆分、資料庫建立、AI 問答與模型交叉檢查，使學習更有效率。以前遇到地震學課本中的長篇英文、複雜公式或圖表時，常常會不知道從哪裡開始理解，但透過 Antigravity 拆分章節後，我可以把問題縮小到特定段落、特定圖表或特定觀念。AI 不是取代學習，而是幫助我更快找到問題核心，但最後仍然需要自己判斷答案是否合理。</p>
+
+      <p>3 月初我開始真正進入地震學的基本物理概念，學到地震波本質上是彈性波。P 波是壓縮波，可以在固體與液體中傳播；S 波是剪力波，只能在固體中傳播，因此 S 波不能穿過液態外核，這也是判斷地球內部層狀構造的重要證據。透過製作第一章互動式網頁，我體會到學習不只是自己看懂，還要能把知識重新組織成別人也能理解的形式。</p>
+
+      <p>3 月的震測實驗與 4 月的國震中心參訪，是最有「地震學現場感」的課程。我才明白一筆地震資料的產生其實非常不容易——從儀器與地面耦合、方位校正到三分量資料的判讀，每個細節都可能影響分析結果。儀器若沒有與地面良好耦合，記錄到的震動可能會失真；方位若沒有對準，後續三分量資料的判讀就可能出錯。地震學資料分析不是從電腦畫圖才開始，而是從儀器放到地面的那一刻就已經開始。</p>
+
+      <p>國震中心參訪讓我把地震學從「地球科學」延伸到「工程防災」。透過地震危害度分析 PSHA，我學到工程設計不是只看某一次大地震，而是要考慮震源分區、地震目錄、衰減公式、場址條件與超越機率。地震工程的目標是透過「小震不壞、中震可修、大震不倒」的理念，讓風險控制在可接受範圍內。過去我可能只會把地震災害歸因於「地震很大」，但現在我知道，災害大小還和場址效應、建築形式、施工品質、結構設計與使用者改建行為密切相關。</p>
+
+      <p>5 月學習震源機制解，是我覺得最具挑戰但也最有成就感的部分。過去我看到海灘球只覺得像黑白圖案，但課程讓我知道，震源機制球其實是地震斷層錯動方式的投影。透過 strike、dip、rake，可以描述斷層面的走向、傾角與滑移方向。更重要的是，我學到單靠震源機制球通常無法直接判斷哪一個節面是真正斷層面，必須結合地體構造背景、餘震分布、地表破裂或其他地質資料才能進一步判斷。</p>
+
+      <p>5 月底操作 Raspberry Pi、MPU6050 感測器與麵包板，讓我第一次感覺到地震儀也可以從小型硬體開始設計。雖然它不能取代專業地震儀，但我開始理解地震觀測系統的基本架構：感測、記錄、分析、判斷、傳輸與警示。這讓我把地震學從課本中的理論、SmartSolo 的專業儀器，延伸到自己可以動手組裝的教學型地震儀。</p>
+
+      <p>整體來看，這學期我學到的不只是地震學知識，而是一套完整的科學學習流程：先用 AI 與數位工具有效率地理解教材，再透過網頁製作把知識視覺化；接著到戶外佈設地震儀，取得真實資料；再回到電腦進行波形、頻譜與訊號分析；之後把地震波理論連結到地球內部構造、地震工程防災與震源機制解；最後再用報告、簡報與互動式網頁把學習成果傳達給別人。這門課讓我從一個只知道地震很可怕的學生，逐漸變成能夠思考「地震如何產生、震波如何傳播、資料如何取得、建築如何受影響、震源機制如何判讀、科技如何協助防災」的地震學學習者。這也是我這學期最大的收穫。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-name">曾柏凱 Tseng Po-Kai</div>
+    <div class="footer-info">U11310015 ・ 臺北市立大學 University of Taipei ・ 地震學 2026 Spring</div>
+    <div class="footer-links">
+      <a href="https://tsengpokai.github.io/dizhenshare_ch_1/" target="_blank">CH1 網頁</a>
+      <a href="https://tsengpokai.github.io/SEISmology_ch3/" target="_blank">CH3 網頁</a>
+      <a href="https://tsengpokai.github.io/Focal-Mechanism/" target="_blank">Focal Mechanism</a>
+      <a href="https://huggingface.co/spaces/tspokai/seismic_exp" target="_blank">震測實驗</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MODAL CONTAINER ==================== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal-content" id="modalContent" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-date" id="modalDate"></div>
+      <h2 id="modalTitle"></h2>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ==================== GAME MODAL ==================== -->
+<div class="game-modal-overlay" id="gameModalOverlay" onclick="closeGameModal(event)">
+  <div class="game-modal" id="gameModal" onclick="event.stopPropagation()">
+    <div class="game-modal-header">
+      <h2 id="gameTitle"></h2>
+      <button class="game-close-btn" onclick="closeGameModal()">✕</button>
+    </div>
+    <div id="gameContent"></div>
+  </div>
+</div>
+
+<!-- ==================== LIGHTBOX ==================== -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
