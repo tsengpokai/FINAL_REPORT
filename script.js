@@ -93,8 +93,8 @@ const weeklyData = {
       
       <h3>📸 實驗資料分析</h3>
       <div class="photo-gallery">
-        <div class="photo-item" onclick="openLightbox('images/smartsolo_analysis.png')">
-          <img src="images/smartsolo_analysis.png" alt="SmartSolo 實驗資料分析截圖">
+        <div class="photo-item" onclick="openLightbox('smartsolo_analysis.png')">
+          <img src="smartsolo_analysis.png" alt="SmartSolo 實驗資料分析截圖">
           <div class="photo-caption">SmartSolo 震測實驗資料分析截圖</div>
         </div>
       </div>
@@ -123,36 +123,36 @@ const weeklyData = {
       
       <h3>📸 參訪照片精選</h3>
       <div class="photo-gallery">
-        <div class="photo-item" onclick="openLightbox('images/ncree_exterior.jpeg')">
-          <img src="images/ncree_exterior.jpeg" alt="國震中心外觀">
+        <div class="photo-item" onclick="openLightbox('ncree_exterior.jpeg')">
+          <img src="ncree_exterior.jpeg" alt="國震中心外觀">
           <div class="photo-caption">國家地震工程研究中心大樓外觀</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/vibration_table.jpg')">
-          <img src="images/vibration_table.jpg" alt="振動台">
+        <div class="photo-item" onclick="openLightbox('vibration_table.jpg')">
+          <img src="vibration_table.jpg" alt="振動台">
           <div class="photo-caption">一樓振動台設施</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/reaction_wall.jpg')">
-          <img src="images/reaction_wall.jpg" alt="反力牆">
+        <div class="photo-item" onclick="openLightbox('reaction_wall.jpg')">
+          <img src="reaction_wall.jpg" alt="反力牆">
           <div class="photo-caption">一樓反力牆實驗設施</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/multiaxial_table.jpeg')">
-          <img src="images/multiaxial_table.jpeg" alt="多軸向振動台">
+        <div class="photo-item" onclick="openLightbox('multiaxial_table.jpeg')">
+          <img src="multiaxial_table.jpeg" alt="多軸向振動台">
           <div class="photo-caption">多軸向測試振動台</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/damaged_building.jpeg')">
-          <img src="images/damaged_building.jpeg" alt="地震損壞建築案例">
+        <div class="photo-item" onclick="openLightbox('damaged_building.jpeg')">
+          <img src="damaged_building.jpeg" alt="地震損壞建築案例">
           <div class="photo-caption">地震損壞建築案例展示</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/earthquake_sim.jpeg')">
-          <img src="images/earthquake_sim.jpeg" alt="地震模擬體驗">
+        <div class="photo-item" onclick="openLightbox('earthquake_sim.jpeg')">
+          <img src="earthquake_sim.jpeg" alt="地震模擬體驗">
           <div class="photo-caption">模擬地震控制設施體驗</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/seismic_isolation.jpg')">
-          <img src="images/seismic_isolation.jpg" alt="隔震設施">
+        <div class="photo-item" onclick="openLightbox('seismic_isolation.jpg')">
+          <img src="seismic_isolation.jpg" alt="隔震設施">
           <div class="photo-caption">隔震設施範例</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/taipei101.jpeg')">
-          <img src="images/taipei101.jpeg" alt="台北101阻尼器">
+        <div class="photo-item" onclick="openLightbox('taipei101.jpeg')">
+          <img src="taipei101.jpeg" alt="台北101阻尼器">
           <div class="photo-caption">台北 101 阻尼器相關展示</div>
         </div>
       </div>
@@ -263,16 +263,16 @@ const weeklyData = {
       
       <h3>📸 手繪海灘球練習</h3>
       <div class="photo-gallery">
-        <div class="photo-item" onclick="openLightbox('images/kamchatka_beachball.jpeg')">
-          <img src="images/kamchatka_beachball.jpeg" alt="手繪 Kamchatka 地震海灘球">
+        <div class="photo-item" onclick="openLightbox('kamchatka_beachball.jpeg')">
+          <img src="kamchatka_beachball.jpeg" alt="手繪 Kamchatka 地震海灘球">
           <div class="photo-caption">手繪 Kamchatka 地震震源機制球</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/practice_example1.jpeg')">
-          <img src="images/practice_example1.jpeg" alt="上課練習範例 1">
+        <div class="photo-item" onclick="openLightbox('practice_example1.jpeg')">
+          <img src="practice_example1.jpeg" alt="上課練習範例 1">
           <div class="photo-caption">上課練習：海灘球投影判讀技巧 (1)</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/practice_example2.jpeg')">
-          <img src="images/practice_example2.jpeg" alt="上課練習範例 2">
+        <div class="photo-item" onclick="openLightbox('practice_example2.jpeg')">
+          <img src="practice_example2.jpeg" alt="上課練習範例 2">
           <div class="photo-caption">上課練習：海灘球投影判讀技巧 (2)</div>
         </div>
       </div>
@@ -330,12 +330,12 @@ const weeklyData = {
       
       <h3>📸 Raspberry Pi 地震儀成果</h3>
       <div class="photo-gallery">
-        <div class="photo-item" onclick="openLightbox('images/iot_discord.png')">
-          <img src="images/iot_discord.png" alt="Bangka-07 地震事件分析報告 Discord 推播">
+        <div class="photo-item" onclick="openLightbox('iot_discord.png')">
+          <img src="iot_discord.png" alt="Bangka-07 地震事件分析報告 Discord 推播">
           <div class="photo-caption">第七組 Bangka-07 自動生成的地震事件分析報告（Discord 推播）</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/iot_displacement.png')">
-          <img src="images/iot_displacement.png" alt="三方向相對位移趨勢分析截圖">
+        <div class="photo-item" onclick="openLightbox('iot_displacement.png')">
+          <img src="iot_displacement.png" alt="三方向相對位移趨勢分析截圖">
           <div class="photo-caption">三方向相對位移趨勢分析，有效震動區間的漂移積分</div>
         </div>
       </div>
@@ -343,12 +343,12 @@ const weeklyData = {
       <p>以下是我們 MPU6050 教學展示型 IoT 地震觀測站的高清分析圖表：</p>
       
       <div class="photo-gallery">
-        <div class="photo-item" onclick="openLightbox('images/iot_report.png')">
-          <img src="images/iot_report.png" alt="完整儀表板報告">
+        <div class="photo-item" onclick="openLightbox('iot_report.png')">
+          <img src="iot_report.png" alt="完整儀表板報告">
           <div class="photo-caption">完整儀表板：含高通濾波後三軸波形、STA/LTA 特徵函數、頻譜分析 (FFT)、滑動 RMS、陀螺儀角速度波形、事件資訊總覽</div>
         </div>
-        <div class="photo-item" onclick="openLightbox('images/displacement_trend.jpg')">
-          <img src="images/displacement_trend.jpg" alt="三方向相對位移趨勢圖">
+        <div class="photo-item" onclick="openLightbox('displacement_trend.jpg')">
+          <img src="displacement_trend.jpg" alt="三方向相對位移趨勢圖">
           <div class="photo-caption">去漂移展示版的三方向相對位移趨勢圖，最大相對位移 69.18 mm</div>
         </div>
       </div>
